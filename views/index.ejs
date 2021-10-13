@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="compass-icon"> <% if(icon !== null)  {%>
+        <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="">
+      <% } %> </div>
+    </header>
+    <div class="weather-title">
+      <h1 class="title">Forecaster</h1>
+      <p>There's no such thing as bad weather, just soft people.</p>
+    </div>
+    <form action="/" method="POST">
+      <input type="text" name="city" class="ghost-input" placeholder="Enter city">
+    </form>
+
+    <div class="result">
+      <% if(temp !== null)  {%>
+        <h1 class="temp"><%= temp %> C</h1>
+      <% } %>
+
+      <div class="icon-des">
+        <!-- <% if(icon !== null)  {%>
+          <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="">
+        <% } %> -->
+        <% if(des !== null)  {%>
+          <h3><%= des %></h3>
+        <% } %>
+      </div>
+
+      <% if(city !== null)  {%>
+        <p class="city"><%= city %></p>
+      <% } %>
+      
+    </div>
+  </div>
+</body>
+</html>

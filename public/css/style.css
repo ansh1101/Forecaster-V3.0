@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-image: url(https://images.unsplash.com/photo-1446104838475-bc6508184f08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+    background-size:cover;
+  }
+  .ghost-input{
+    border-radius: 10px;
+    background-color: rgba(144, 211, 211, 0.534);
+  }
+  
+  .container {
+    max-width: 22rem;
+    margin: 10rem auto;
+    border-radius: 50px;
+    background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(97, 100, 138, 0.37);
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 30px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  
+  header {
+    background: rgb(204, 189, 189);
+    height: 3rem;
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+  }
+  
+  .title{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  header .compass-icon {
+    width: 50px;
+    height: 50px;
+    background:rgb(197, 180, 180);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+    border-radius: 50%;
+  }
+  
+  .weather-title {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .weather-title h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  form {
+    padding: 0 .5rem;
+  }
+  
+  form input {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid #807a7a;
+  }
+  
+  .result {
+    text-align: center;
+  }
+  
+  .result .temp {
+    font-size: 2rem;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  .result .temp::after {
+    content: 'o';
+    position: absolute;
+    font-size: 15px;
+    top: -5px;
+    right: 7rem;
+  }
+  
+  .result .icon-des {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .result .icon-des .icon {
+    margin-right: 1rem;
+  }
+  
+  .result .city {
+    font-size: 1rem;
+  }
+  .icon{
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+  }
