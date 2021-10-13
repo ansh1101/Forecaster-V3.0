@@ -4,15 +4,9 @@ const bodyparser = require('body-parser');
 const app = express(); 
 // const https = require('https');
 const request = require('superagent');
-
-var mailchimpInstance   = 'us5',
-    listUniqueId        = '6f27008ca1',
-    mailchimpApiKey     = '473fb8efb2e2cb16a806a9a61ccee90f-us5';
-
     app.use(express.static('signup'));
 app.post('/signup', function (req, res) {
-    request
-        .post('https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/')
+    request]0/lists/' + listUniqueId + '/members/')
         .set('Content-Type', 'application/json;charset=utf-8')
         .set('Authorization', 'Basic ' + new Buffer('any:' + mailchimpApiKey ).toString('base64'))
         .send({
