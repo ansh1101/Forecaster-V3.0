@@ -37,54 +37,54 @@ app.listen(5000 , function(){
 
 })
 
-// app.use(bodyparser.urlencoded({extended:true}));
-// app.use(express.static("public"))
+app.use(bodyparser.urlencoded({extended:true}));
+app.use(express.static("public"))
   
 
-// app.get('/', (req , res) => {
-//     res.sendFile(`${__dirname}/signup.html`)
-//     console.log(req.body);
-// })
+app.get('/', (req , res) => {
+    res.sendFile(`${__dirname}/signup.html`)
+    console.log(req.body);
+})
  
-// app.post(`/`, (req, res) => {
-//     const firstname = req.body.fname;
-//     const secondname = req.body.sname;
-//     const email = req.body.email;
+app.post(`/`, (req, res) => {
+    const firstname = req.body.fname;
+    const secondname = req.body.sname;
+    const email = req.body.email;
 
-//     const data = {
-//         members : [
-//             {
-//                 email_address : email,
-//                 status: "subscriber",
-//                 merge_fields: {
-//                     FNAME: firstname,
-//                     LNAME: secondname
-//                 }
-//             }
-//         ]
-//     };
-//     const jsonData =JSON.stringify(data);
-//     console.log(firstname , secondname , email);
-//     const url = `https://server.api.mailchimp.com/3.0/lists/6f27008ca1`;
-//     const options ={
-//         method: "POST",
-//         auth: "HexBlast:aa5e1f1c3a6918b0a0755d01d745173e-us5"
-//     }
-//    const request =  https.request(url, options , function(response){
-//         response.on("data" , function(data){
-//             console.log(JSON.parse(data));
-//         })
-//     })
+    const data = {
+        members : [
+            {
+                email_address : email,
+                status: "subscriber",
+                merge_fields: {
+                    FNAME: firstname,
+                    LNAME: secondname
+                }
+            }
+        ]
+    };
+    const jsonData =JSON.stringify(data);
+    console.log(firstname , secondname , email);
+    const url = `https://server.api.mailchimp.com/3.0/lists/6f27008ca1`;
+    const options ={
+        method: "POST",
+        auth: "HexBlast:aa5e1f1c3a6918b0a0755d01d745173e-us5"
+    }
+   const request =  https.request(url, options , function(response){
+        response.on("data" , function(data){
+            console.log(JSON.parse(data));
+        })
+    })
 
-//     request.write(jsonData);
-//     request.end();
-// });
+    request.write(jsonData);
+    request.end();
+});
  
-// app.listen(8000 , ()=>{
-// });
+app.listen(8000 , ()=>{
+});
 
-// // apikey
-// // 473fb8efb2e2cb16a806a9a61ccee90f-us5
+// apikey
+// 473fb8efb2e2cb16a806a9a61ccee90f-us5
 
-// // audience id 
-// // 6f27008ca1
+// audience id 
+// 6f27008ca1
