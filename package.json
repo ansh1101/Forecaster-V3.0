@@ -8,7 +8,7 @@
     "start": "node app",
     "dev": "nodemon app"
   },
-  "author": "",
+  "author": "ansh",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
